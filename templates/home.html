@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    h1 {
+      
+      font-size:40px;
+      font-family:Roboto;
+      font-weight:normal;
+      text-align:center;
+      color:#6a686e
+    }
+
+    #banner{
+      width:100%;
+      height:360px;
+      object-fit:cover;
+    }
+
+    h2{
+      font-family:Roboto;
+      font-size:32px;
+      color:#6a686e;
+      text-align:center;
+      font-weight:normal;
+    }
+
+    .container{
+      max-width:1000px;
+      margin:0 auto;
+    }
+    .bodytext{
+      font-family:Roboto;
+      color:#6a686e;
+    }
+
+    
+  </style>
+  
+</head>
+<body>
+  <div class="container">
+    <h1 class='text-center mt-2 mb-4'>career hub insights</h1>
+    <img class='img-fluid' id="banner" src="https://d71097ff-3f44-4e26-b895-6e08b381e780-00-gyle45gaeg4x.sisko.replit.dev/static/banner.jpg" width=100% height="300">
+    <h2>About</h2>
+    <p class="lead">"Welcome to "carrer_insight_hub", your go-to destination for the latest career updates and invaluable insights to propel your professional journey. We understand the significance of staying ahead in the dynamic job market, and that's why we curate a wealth of information to empower job seekers like you. From expert advice on crafting standout resumes and acing interviews to in-depth analyses of industry trends and emerging opportunities, we've got your career covered. This is not just a website; it's a vibrant hub where you can access the tools and knowledge needed to navigate your career path with confidence. Explore our resources, stay informed, and take the next step toward your professional success. Your future career awaits, and we're here to help you unlock its full potential."
+
+    </p>
+    <h2>Open Positions</h2>
+    <p>
+      <div>
+          {% for job in jobs %}
+             {% include 'jobitem.html' %}
+          {% endfor %}
+      </div>
+    </p>
+    <div style="text-align:center;">
+      <button>Contact Us</button>
+      <p>Copyright 2022,insights</p>
+    </div>
+
+  </div>
+</body>
+</html>
